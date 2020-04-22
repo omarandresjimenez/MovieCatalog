@@ -14,7 +14,7 @@ http://localhost:63545/api/useritems     (local url asp.net core project)
 
 ## Development API REST server
 
-Open project with Visual Studio 2019+ and Run with default options.
+Open project with Visual Studio 2019+ and Run with default options. THis is under UserManagementApi folder.
 
 Set in the appsettings.json file the Connection string with the SQL server DB.  
 
