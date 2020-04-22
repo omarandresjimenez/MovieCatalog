@@ -1,0 +1,9 @@
+<table class="table table-hover">
+    <tr *ngFor="let user of users$ | async" (click)="onEditUser(user.userName, user.userRole === 'admin')">
+        <td>{{user.userName}}</td>
+        <td>{{user.userRole === 'admin' ? 'admin' : 'user' }}</td>
+        <td>
+          <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete($event, user.userName)"></i>
+        </td>
+       </tr>
+</table>

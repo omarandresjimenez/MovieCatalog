@@ -1,0 +1,47 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit()">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-user-circle" [class.green-icon]="userName.valid" [class.red-icon]="userName.invalid && userName.touched"></i>
+          </div>
+        </div>
+        <input name="userName" #userName="ngModel" [(ngModel)]="userData.userName" class="form-control"
+          placeholder="User Name" required maxlength="40" [disabled]="!newUser">
+      </div>
+    </div>
+    <div class="form-group" *ngIf="newUser">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-key"  [class.green-icon]="userPassword.valid" [class.red-icon]="userPassword.invalid && userPassword.touched"></i>
+          </div>
+        </div>
+        <input type="password" name="userPassword" #userPassword="ngModel" [(ngModel)]="userData.userPassword" 
+        class="form-control" placeholder="password" required maxlength="16" minlength="5">
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group col-md-3 float-left">
+       
+          <input type="checkbox"  name="userAdmin" #userAdmin="ngModel" [(ngModel)]="userData.userAdmin"  class="form-control" >
+          <label for="userAdmin">Admin user</label>
+           
+        </div>
+        <div class=" col-md-9 float-right">
+            <div class="input-group"> &nbsp;
+           
+    
+               
+            </div>
+          </div>
+      </div>
+      <BR>
+      <BR>
+    <div class="form-group" style="display: flex;">
+      <button type="button" class="btn btn-success btn-lg btn-block col-md-5" (click)="resetForm(form)"><i class="fas fa-plus"></i> New User</button>
+      <div class="col-md-2"></div>
+      <button class="btn btn-success btn-lg btn-block col-md-5" type="submit" [disabled]="form.invalid"><i class="fas fa-database"></i> Save</button>
+    </div>
+  </form>

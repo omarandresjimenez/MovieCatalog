@@ -1,0 +1,17 @@
+
+    <div class="card-content">
+        <div class="card-img">
+            <img [src]="card.image?.medium" alt="">
+            <span><h4>{{ card.name }}</h4></span>
+        </div>
+        <div class="card-desc">
+            <h3>{{ card.name }}</h3>
+            <span innerHTML="{{ card.summary | limitTo : '100' }}" ></span>
+            <button (click)="onSelect(card.id)" class="btn-card">More</button>
+               
+        </div>
+    </div>
+
+
+
+

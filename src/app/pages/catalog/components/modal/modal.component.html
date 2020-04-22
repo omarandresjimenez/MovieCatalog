@@ -1,0 +1,56 @@
+<div class="container" [style.marginTop.px]="100">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+
+                    <div class="preview-pic tab-content">
+                       
+                        <div class="tab-pane active" id="pic-{{card.id}}"><img [src]="card.image?.original" class="mainimg"/></div>
+
+                    </div>
+
+
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">{{ card.name }}</h3> 
+                    <i class='fas fa-arrow-alt-circle-left back' title="Back to Catalog" (click)="onBack()"></i>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="review-no">{{ card.rating }} reviews</span>
+                        </div>
+
+                    </div>
+                    <p class="product-description" > <span [innerHTML]="card.summary"></span> </p>
+
+                    <h5 class="sizes">Genres:
+                        <span class="size" data-toggle="tooltip" title="small"
+                            *ngFor="let gen of card.genres">{{ gen }} </span>
+                    </h5>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 ">
+                                <h3 class="heading-6  text-left">Cast</h3>
+                                <hr class="mx-auto">
+                            </div>
+                            <div class="col-sm-3" *ngFor="let cast of casts">
+                                <div class="card">
+                                    <img [src]="cast?.image" class="w-100">
+
+                                    <div class="card-block">
+                                            {{ cast.name }}
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

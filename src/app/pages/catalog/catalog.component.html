@@ -1,0 +1,17 @@
+
+<section class="details-card"  *ngIf="catalogView">
+    <div class="container">
+        <app-searchbar></app-searchbar>
+        <div class="row" >
+            <div class="col-md-3" [style.paddingBottom.px]="20" *ngFor="let movie of moviesCatalog$">
+            
+            <app-card-movie [card]="movie" (selectedCard)="onSelectCard($event)"></app-card-movie>
+           
+            </div>
+        </div>
+    </div>
+</section>
+<app-modal [card]="cardInfo" [casts]="casts" (backCatalog)="onBack()" *ngIf="!catalogView && cardInfo"></app-modal>
+
+  
+  

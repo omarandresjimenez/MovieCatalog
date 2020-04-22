@@ -1,0 +1,12 @@
+<div class="jumbtron" [style.marginTop.px]="60">
+    <h1 class="display-4 text-center">Users Management</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-5" [style.marginLeft.px]="50">
+        <app-user-form [userToEdit]="user" ></app-user-form>
+      </div>
+      <div class="col-md-5" [style.marginLeft.px]="50">
+        <app-user-list (editUser)="onUserSelected($event)"></app-user-list>
+      </div>
+    </div>
+  </div>

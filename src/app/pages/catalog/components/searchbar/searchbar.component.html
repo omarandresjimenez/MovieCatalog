@@ -1,0 +1,20 @@
+<div class="container h-100" >
+  <form name="form" (submit)="onSearch(txtSearch.value)">
+    <b>Rating Filter:</b> <div class="btn-group show-on-hover">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        {{ rating }} <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li *ngFor="let n of [1,2,3,4,5,6,7,8,9]"  ><span (click)="filerByRating(n)" style="margin-left: 15px; cursor: pointer;"><b>{{ n }}+</b></span></li>
+     
+      </ul>
+    </div>
+    <div class="d-flex justify-content-left h-100">
+      <div class="searchbar">
+        <input class="search_input" type="text" name="txtSearch" #txtSearch placeholder="Search...">
+        <a   (click)="onSearch(txtSearch.value)" class="search_icon"><i class="fas fa-search"></i></a>
+
+      </div>
+    </div>
+  </form>
+  </div>

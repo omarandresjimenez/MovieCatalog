@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink=".">Movie Search</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          
+            <a class="nav-link" [class.dropdown-toggle]="(sessionUser$  | async)?.userRole === 'admin'" data-toggle="dropdown" href="#" id="navbardrop" > <i class="fas fa-user-circle green-icon" ></i> {{ (sessionUser$  | async)?.userName || "Guest User"}}</a>
+            <div class="dropdown-menu" *ngIf="(sessionUser$  | async)?.userRole === 'admin'">
+                <a class="dropdown-item" style="cursor:pointer" (click)="onGoUsers()">User Management</a>
+              </div>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn btn-primary btn-sm" [style.margin.px]="5" (click)="onLogOut()"><i class="fas fa-sign-out-alt"></i> LogOut</button>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+
+
+
