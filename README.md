@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
-ASP.NET Core as Back end   Angular 9 as Front End
+ASP.NET Core as Back End   Angular 9 as Front End
 
 # API Movies
 
@@ -18,20 +18,19 @@ Open project with Visual Studio 2019+ and Run with default options.
 
 Set in the appsettings.json file the Connection string with the SQL server DB.  
 
-From VS PAckage Manager termianl run  Migrations to create the Table UserItems in the DB:
+From VS Package Manager terminal run  Migrations to create the Table UserItems in the DB:
 
 Add-Migration "InitialCreate"
 Update-Database
-
-## Set Global variables
-
-Update environment variables to set the API urls accordingly
 
 
 ## Development Angular server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Set Environment variables
+
+Update environment variables to set the API urls accordingly
 
 ## Code scaffolding
 
