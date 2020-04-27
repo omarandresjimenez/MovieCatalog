@@ -1,5 +1,5 @@
 <div class="container h-100" >
-  <form name="form" (submit)="onSearch(txtSearch.value)">
+  <form name="form" (submit)="onSearch(txtSearch.value)" class="form">
     <b>Rating Filter:</b> <div class="btn-group show-on-hover">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         {{ rating }} <span class="caret"></span>
@@ -12,7 +12,7 @@
     <div class="d-flex justify-content-left h-100">
       <div class="searchbar">
         <input class="search_input" type="text" name="txtSearch" #txtSearch placeholder="Search...">
-        <a   (click)="onSearch(txtSearch.value)" class="search_icon"><i class="fas fa-search"></i></a>
+        <span   (click)="onSearch(txtSearch.value)" class="search_icon"><i class="fas fa-search"></i></span>
 
       </div>
     </div>

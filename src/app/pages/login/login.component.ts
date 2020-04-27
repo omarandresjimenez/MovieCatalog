@@ -5,6 +5,7 @@ import { UserLogin } from 'src/app/models/userLogin';
 import { UserService } from '../user/services/user.service';
 import { UserSession } from 'src/app/models/userSession';
 import { Observable, Subscription } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -18,15 +19,16 @@ export class LoginComponent implements OnInit, OnDestroy {
   public sub: Subscription;
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private session: UserService) { }
-
+              private session: UserService,
+              private toast: ToastrService) { }
 
   public ngOnInit(): void {
     this.sub = this.userSession$.subscribe((res: UserSession) => {
       if (res) {
         this.router.navigate([ '..', 'container' ], { relativeTo: this.route });
       }
-    });
+    },
+    (err) => this.toast.warning(err));
   }
 
   public ngOnDestroy(): void {

@@ -18,6 +18,7 @@ import { TruncatePipe } from 'src/app/share/pipes/limitTo.pipe';
 import { ModalComponent } from '../catalog/components/modal/modal.component';
 
 
+
 @NgModule({
   declarations: [
     ContainerComponent,

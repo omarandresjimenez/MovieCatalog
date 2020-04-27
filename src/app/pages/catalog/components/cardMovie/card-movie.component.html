@@ -6,12 +6,17 @@
         </div>
         <div class="card-desc">
             <h3>{{ card.name }}</h3>
-            <span innerHTML="{{ card.summary | limitTo : '100' }}" ></span>
-            <button (click)="onSelect(card.id)" class="btn-card">More</button>
+            <div class="rating">
+                <div class="stars">
+                    <span class="fa fa-star checked fa-color"></span>
+                    <span class="review-no" [style.padding.px]="10">{{ card.rating }} reviews</span>
+                    <button (click)="onSelect(card.id)" class="btn-card">Details</button>
+                </div>
+
+            </div>
+           
                
         </div>
     </div>
-
-
 
 

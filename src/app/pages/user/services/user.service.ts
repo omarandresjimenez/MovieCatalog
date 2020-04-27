@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
-import { shareReplay, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of, Subject, throwError } from 'rxjs';
+import { shareReplay, tap, catchError } from 'rxjs/operators';
 
-import { ToastrService } from 'ngx-toastr';
 import { UserSession } from 'src/app/models/userSession';
 import { UserLogin, UserModel } from 'src/app/models/userLogin';
 import { ApiService } from '../api/api.service';
@@ -16,24 +15,16 @@ export class UserService {
 
   public newUserAdded$ = new Observable();
   private newUserAdded = new Subject();
-  constructor(private service: ApiService,
-              private toast: ToastrService) {
+  constructor(private service: ApiService) {
     this.userSession$ = this.userSession.asObservable();
     this.newUserAdded$ = this.newUserAdded.asObservable();
   }
 
   public authenticate(userInfo: UserLogin): void {
 
-    this.service.authenticate(userInfo).pipe(shareReplay(1)).
-      subscribe((res: UserSession) => {
-      if (!res) {
-        this.toast.error('Wrong user or password');
-      }
-      this.userSession.next(res);
-    },
-      (err) => {
-        this.toast.error('Wrong user or password');
-       });
+    this.service.authenticate(userInfo).pipe(shareReplay(1),
+      catchError( err => throwError(err))).
+      subscribe((res: UserSession) => this.userSession.next(res));
   }
 
   public notifyNewUser(): void {

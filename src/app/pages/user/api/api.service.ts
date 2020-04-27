@@ -1,19 +1,30 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin, UserModel } from 'src/app/models/userLogin';
-import { Observable } from 'rxjs';
+import { Observable, throwError, of } from 'rxjs';
 import { UserSession } from 'src/app/models/userSession';
+import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AppHttpErrorHandler } from 'src/app/core/utils/errorHAndler';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApiService extends AppHttpErrorHandler  {
   private readonly BASEURL = environment.baseUrlApiUser;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              public router: Router,
+              public toast: ToastrService) {
+     super(router, toast);
+   }
 
   public authenticate(userLogin: UserLogin): Observable<UserSession> {
-    return this.http.post<UserSession>(this.BASEURL + 'useritems/authenticate', userLogin);
+    return this.http.post<UserSession>(this.BASEURL + 'useritems/authenticate', userLogin)
+    .pipe(
+      catchError((err) => this.handleError(err))
+      );
   }
 
   public createUser(userModel: UserModel): Observable<boolean> {
@@ -41,4 +52,5 @@ export class ApiService {
   public getUsers(): Observable<[UserSession]> {
     return this.http.get<any>(this.BASEURL + 'useritems');
   }
+
 }
