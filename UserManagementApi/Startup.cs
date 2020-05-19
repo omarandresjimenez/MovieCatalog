@@ -27,8 +27,10 @@ namespace UserManagementApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+          var server = Environment.GetEnvironmentVariable("DBSERVER") != null ? Environment.GetEnvironmentVariable("DBSERVER") :  "localhost";
+          var strcon = Configuration.GetConnectionString("DevConnection").Replace("dbserver", server);
           services.AddDbContext<UserContext>(optionns =>
-            optionns.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            optionns.UseSqlServer(strcon));
           services.AddControllers();
           services.AddMvc().AddNewtonsoftJson();
             services.AddCors();

@@ -22,8 +22,8 @@ export abstract class AppHttpErrorHandler {
         this.toast.error('Unexpected server error');
         return throwError(res);
 
-      case (!!res.error.message):
-        this.toast.error(res.error.message);
+      case (!!res.error.message || !!res.message):
+        this.toast.error(res.error.message || res.message);
         return throwError(res);
 
       default:
