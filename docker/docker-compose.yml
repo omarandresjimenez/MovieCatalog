@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: nginx.dockerfile
     volumes:
-      - ./dist/personal-site:/usr/share/nginx/html
+      - ../dist/personal-site:/usr/share/nginx/html
     ports:
       - "80:80"
       - "443:443"
@@ -22,10 +22,10 @@ services:
     container_name: 'aspnetcoreapp'
     image: aspnetapimovie
     build:
-      context: .
-      dockerfile: ./UserManagementApi/prod.dockerfile
+      context: ../UserManagementApi/
+      dockerfile: prod.dockerfile
     environment:
-      DBSERVER: '192.168.0.8'
+      DBSERVER: '192.168.0.9'
     ports:
      - "5000:5000"
     depends_on:
@@ -48,17 +48,15 @@ services:
 
   localdbserver:
     container_name: 'localdbserver'
-    image: currentsqlserver
+    image: sqlserver
     build:
       context: .
-      dockerfile: ./UserManagementApi/sqlserver.dockerfile
-    environment:
-      ACCEPT_EULA: 'Y'
-      SA_PASSWORD: reallyStrongPwd123
+      dockerfile: sqlserver.dockerfile
     ports:
       - "1433:1433"
-    volumes:
-      - sqlvolume:/var/opt/mssql
+    #Enable only when this image be built indenpendly
+    #volumes:
+    # - sqlvolume:/var/opt/mssql
     networks:
       - aspnetcoreapp-network
 
@@ -66,5 +64,5 @@ networks:
   aspnetcoreapp-network:
     driver: bridge
 
-volumes:
-  sqlvolume:
+#volumes:
+#  sqlvolume:

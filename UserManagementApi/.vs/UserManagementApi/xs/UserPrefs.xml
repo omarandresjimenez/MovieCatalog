@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="appsettings.json" Line="11" Column="39" />
-      <File FileName="Migrations/20200418032517_InitialCreate.Designer.cs" Line="23" Column="67" />
-      <File FileName="Controllers/UserItemsController.cs" Line="154" Column="46" />
-      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="appsettings.json" />
+      <File FileName="Migrations/20200418032517_InitialCreate.Designer.cs" />
+      <File FileName="Controllers/UserItemsController.cs" />
+      <File FileName="Startup.cs" Line="37" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +22,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
