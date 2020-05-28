@@ -1,0 +1,65 @@
+version: '3.7'
+
+services:
+
+  nginx:
+    container_name: nginx-angular
+    image: nginx-angular
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    #volumes:
+    #  - dist/personal-site:/usr/share/nginx/html
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on: 
+      - apiweb
+    networks:
+      - aspnetcoreapp-network
+
+  apiweb:
+    container_name: 'aspnetcoreapp'
+    image: aspnetapimovie
+    build:
+      context: UserManagementApi/
+      dockerfile: prod.dockerfile
+    environment:
+      DBSERVER: '192.168.0.9'
+    ports:
+     - "5000:5000"
+    depends_on:
+     - localdbserver
+    networks:
+      - aspnetcoreapp-network
+
+  # localdbserver:
+  #   container_name: 'localdbserver'
+  #   image: currentsqlserver
+  #   environment:
+  #     ACCEPT_EULA: 'Y'
+  #     SA_PASSWORD: reallyStrongPwd123
+  #   ports:
+  #     - "1433:1433"
+  #   volumes:
+  #     - sqlvolume:/var/opt/mssql
+  #   networks:
+  #     - aspnetcoreapp-network
+
+  localdbserver:
+    container_name: 'localdbserver'
+    image: sqlserver
+    build:
+      context: .
+      dockerfile: sqlserver.dockerfile
+    ports:
+      - "1433:1433"
+    #Enable only when this image be built indenpendly
+    #volumes:
+    # - sqlvolume:/var/opt/mssql
+    networks:
+      - aspnetcoreapp-network
+
+networks:
+  aspnetcoreapp-network:
+    driver: bridge

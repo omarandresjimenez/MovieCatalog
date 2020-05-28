@@ -32,6 +32,25 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Update environment variables to set the API urls accordingly
 
+## Docker implementation
+
+Whole project can be configured to run in Docker, using docker-composer up Docker will create all the images needed:
+
+sqlserver: including the DB Demo
+aspnetapimovie:  asp.net core server   API server
+nginx-angular: front end server for Angular app
+
+3 containers  interconected will be set to run whole system.
+
+Before run docker-composer up,  edit the docker-composer.yml file, only required change is the key  DBSERVER  under apiweb service tag , just change '192.168.0.9' by your current ip address.
+
+After run the composer command, go to http://localhost
+
+You can use user: tempadUser  pwd: anypwd   to log as an admin.
+
+
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
