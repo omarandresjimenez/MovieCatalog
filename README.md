@@ -37,7 +37,9 @@ Update environment variables to set the API urls accordingly
 Whole project can be configured to run in Docker, using docker-composer up Docker will create all the images needed:
 
 sqlserver: including the DB Demo
+
 aspnetapimovie:  asp.net core server   API server
+
 nginx-angular: front end server for Angular app
 
 3 containers  interconected will be set to run whole system.
