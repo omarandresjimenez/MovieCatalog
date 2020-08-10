@@ -34,7 +34,7 @@ Update environment variables to set the API urls accordingly
 
 ## Docker implementation
 
-Whole project can be configured to run in Docker, using docker-composer up Docker will create all the images needed:
+Whole project can be configured to run in Docker, using docker-compose up Docker will create all the images needed:
 
 sqlserver: including the DB Demo
 
@@ -48,7 +48,7 @@ Before run docker-composer up,  edit the docker-composer.yml file, only required
 
 After run the composer command, go to http://localhost
 
-You can use user: tempadUser  pwd: anypwd   to log as an admin.
+You can use user: tempadmUser  pwd: anypwd   to log as an admin.
 
 
 
