@@ -1,8 +1,8 @@
 # Movie Catalog 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8
 
-ASP.NET Core as Back End   Angular 9 as Front End
+ASP.NET Core as Back End   Angular 10 as Front End
 
 # API Movies
 
@@ -44,7 +44,7 @@ nginx-angular: front end server for Angular app
 
 3 containers  interconected will be set to run whole system.
 
-Before run docker-composer up,  edit the docker-composer.yml file, only required change is the key  DBSERVER  under apiweb service tag , just change '192.168.0.9' by your current ip address.
+Before run docker-composer up,  edit the docker-composer.yml file, only required change is the key  DBSERVER  under apiweb service tag , just change '192.168.0.7' by your current ip address.
 
 After run the composer command, go to http://localhost
 
