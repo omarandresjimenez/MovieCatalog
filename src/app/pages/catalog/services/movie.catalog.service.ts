@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, pipe } from 'rxjs';
 
 import { MovieApiService } from '../api/movie.api';
-import { CardMovie, CardMovieCast } from 'src/app/models/cardMovie';
+import { CardMovie, CardMovieCast } from '../../../models/cardMovie';
 import { shareReplay } from 'rxjs/operators';
 
 @Injectable({
