@@ -25,7 +25,8 @@ namespace UserManagementApi.Controllers
 
         // GET: api/UserItems
         [HttpGet]
-        public  IEnumerable<UserSession> GetUserItems()
+      //  [ValidateAntiForgeryToken]
+        public IEnumerable<UserSession> GetUserItems()
         {
           
           var users = _context.UserItems
@@ -35,6 +36,7 @@ namespace UserManagementApi.Controllers
 
         // GET: api/UserItems/5
         [HttpGet("{id}")]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult<UserItem>> GetUserItem(string id)
         {
             var userItem = await _context.UserItems.FindAsync(id);
@@ -52,6 +54,7 @@ namespace UserManagementApi.Controllers
         // more details see https://aka.ms/RazorPagesCRUD.
         //only update Role
         [HttpPut("{id}")]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> PutUserItem(string id, UserItem userItem)
         {
            
@@ -93,6 +96,7 @@ namespace UserManagementApi.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult<UserItem>> PostUserItem(UserItem userItem)
         {
             var message = userItem.userPassword;

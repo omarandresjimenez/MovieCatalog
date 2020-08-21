@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAi/JElKy080yj9s1E21629AAAAAACAAAAAAADZgAAwAAAABAAAADnAeQ0GSE7MwIgWg3/DQNvAAAAAASAAACgAAAAEAAAAFUHPhXXcQ213sMK1lUrhmGAAAAALKRWVTcywXbI0TvOHMjJkJb4u8wMVi9M1fw2wtCvOZ8pLCRV6Z30Iib3uIIB8BNL8zZgyFzB+q9+83JF5qakc2JTae6QM8WuUaHX+rTHxb8rZSwKyB53h440EzWrh2Lj1WaBbemIrSvhYVoy7qjQ5MJVFZ8AqneOiYcbqOw3RG4UAAAAeJAb2cZxb36ji0fVhiOUUhkkvTA=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DevConnection">
+      <Value>Server=dbserver,1433%3bDatabase=Demo%3buser id=oajmserveradmin%3bpwd=%40dminazure14%3bMultipleActiveResultSets=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

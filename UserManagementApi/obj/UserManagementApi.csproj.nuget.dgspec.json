@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/UserManagementApi.csproj": {}
+    "C:\\oajm\\projects\\oajm-api-demo\\UserManagementApi.csproj": {}
   },
   "projects": {
-    "/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/UserManagementApi.csproj": {
+    "C:\\oajm\\projects\\oajm-api-demo\\UserManagementApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/UserManagementApi.csproj",
+        "projectUniqueName": "C:\\oajm\\projects\\oajm-api-demo\\UserManagementApi.csproj",
         "projectName": "UserManagementApi",
-        "projectPath": "/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/UserManagementApi.csproj",
-        "packagesPath": "/Users/oaj/.nuget/packages/",
-        "outputPath": "/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/",
+        "projectPath": "C:\\oajm\\projects\\oajm-api-demo\\UserManagementApi.csproj",
+        "packagesPath": "C:\\Users\\jimenezo\\.nuget\\packages\\",
+        "outputPath": "C:\\oajm\\projects\\oajm-api-demo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/oaj/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jimenezo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,6 +67,14 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[4.7.0, )"
@@ -89,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
