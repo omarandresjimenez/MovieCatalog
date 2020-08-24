@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ASP.NET Core as Back End   Angular 10 as Front End
 
+Live site: https://oajm-front-app.azurewebsites.net
+
 # API Movies
 
 http://api.tvmaze.com/
