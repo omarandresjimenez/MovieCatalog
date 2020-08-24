@@ -27,15 +27,16 @@ namespace UserManagementApi.Controllers
             _config = config;
         }
 
-    // GET: api/UserItems
-    [Authorize]
-    [HttpGet]
-        public ActionResult<IEnumerable<UserSession>> GetUserItems()
+        // GET: api/UserItems
+        [HttpGet]
+        [Authorize]
+      //  [ValidateAntiForgeryToken]
+        public  IEnumerable<UserSession> GetUserItems()
         {
 
-      var users = _context.UserItems
+      var users =  _context.UserItems
                        .Select(x => new UserSession(x.userName, x.userRole, "1"));
-            return Ok(users.ToArray());
+            return users.ToArray();
         }
 
     // GET: api/UserItems/5
