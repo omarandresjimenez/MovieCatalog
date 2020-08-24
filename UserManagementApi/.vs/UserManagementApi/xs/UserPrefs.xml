@@ -1,11 +1,17 @@
-﻿<Properties StartupConfiguration="{CA538C4F-1FC5-41FE-9565-D6952E69C604}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+﻿<Properties StartupConfiguration="{CA538C4F-1FC5-41FE-9565-D6952E69C604}|UserManagementApi">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Helpers/AuthorizeAttribute.cs">
     <Files>
-      <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="appsettings.json" />
-      <File FileName="Migrations/20200418032517_InitialCreate.Designer.cs" />
-      <File FileName="Controllers/UserItemsController.cs" />
-      <File FileName="Startup.cs" Line="37" Column="10" />
+      <File FileName="appsettings.Development.json" Line="9" Column="15" />
+      <File FileName="appsettings.json" Line="17" Column="1" />
+      <File FileName="Controllers/UserItemsController.cs" Line="156" Column="39" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="utils/Hash.cs" />
+      <File FileName="utils/Security.cs" Line="28" Column="53" />
+      <File FileName="Helpers/AppSettings.cs" />
+      <File FileName="Helpers/AuthorizeAttribute.cs" Line="14" Column="10" />
+      <File FileName="Helpers/JwtMiddleware.cs" Line="55" Column="1" />
+      <File FileName="services/userService.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,13 +20,23 @@
             <Node name="UserManagementApi" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="Helpers" expanded="True">
+                <Node name="AuthorizeAttribute.cs" selected="True" />
+              </Node>
               <Node name="Migrations" expanded="True">
                 <Node name="20200418032517_InitialCreate.cs" expanded="True" />
               </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="services" expanded="True" />
+              <Node name="utils" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>global::System.Configuration.ConfigurationManager.AppSettings</Value>
         </State>
       </Pad>
     </Pads>

@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { MovieCatalogService } from './services/movie.catalog.service';
 import { Observable, Subscription, combineLatest } from 'rxjs';
-import { CardMovie, CardMovieCast } from 'src/app/models/cardMovie';
+import { CardMovie, CardMovieCast } from '@app/models/cardMovie';
 import { tap } from 'rxjs/operators';
 
 @Component({

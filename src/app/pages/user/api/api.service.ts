@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { environment } from '../../../../environments/environment.prod';
-import { UserLogin, UserModel } from '../../../models/userLogin';
+import { environment } from '@environments/environment';
+import { UserLogin, UserModel } from '@app/models/userLogin';
 import { Observable, throwError, of } from 'rxjs';
-import { UserSession } from '../../../models/userSession';
+import { UserSession } from '@app/models/userSession';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AppHttpErrorHandler } from '../../../core/utils/errorHandler';
+import { AppHttpErrorHandler } from '@app/core/utils/errorHandler';
 
 @Injectable({
   providedIn: 'root'

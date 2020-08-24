@@ -152,8 +152,8 @@ C:/oajm/projects/UserManangement/UserManagementApi/bin/Debug/netcoreapp3.1/Micro
 C:/oajm/projects/UserManangement/UserManagementApi/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
 C:/oajm/projects/UserManangement/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/appsettings.Development.json
-/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/UserManagementApi.deps.json
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/UserManagementApi.runtimeconfig.json
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/UserManagementApi.runtimeconfig.dev.json
@@ -193,6 +193,9 @@ C:/oajm/projects/UserManangement/UserManagementApi/obj/Debug/netcoreapp3.1/UserM
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -214,6 +217,7 @@ C:/oajm/projects/UserManangement/UserManagementApi/obj/Debug/netcoreapp3.1/UserM
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
@@ -289,10 +293,10 @@ C:/oajm/projects/UserManangement/UserManagementApi/obj/Debug/netcoreapp3.1/UserM
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.csprojAssemblyReference.cache
-/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.csproj.CoreCompileInputs.cache
-/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.AssemblyInfoInputs.cache
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.AssemblyInfo.cs
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.csproj.CoreCompileInputs.cache
+/Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.RazorTargetAssemblyInfo.cache
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/UserManagementApi.csproj.CopyComplete
 /Users/oaj/Documents/oajm/angular/MovieCatalog/UserManagementApi/obj/Debug/netcoreapp3.1/staticwebassets/UserManagementApi.StaticWebAssets.Manifest.cache

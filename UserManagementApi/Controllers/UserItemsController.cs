@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 using UserManagementApi.Models;
+using UserManagementApi.services;
 using UserManagementApi.utils;
 
 namespace UserManagementApi.Controllers
@@ -17,29 +19,34 @@ namespace UserManagementApi.Controllers
     public class UserItemsController : ControllerBase
     {
         private readonly UserContext _context;
+        private readonly IConfiguration _config;
 
-        public UserItemsController(UserContext context)
+        public UserItemsController(UserContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
-        // GET: api/UserItems
-        [HttpGet]
-        public  IEnumerable<UserSession> GetUserItems()
+    // GET: api/UserItems
+    [Authorize]
+    [HttpGet]
+        public ActionResult<IEnumerable<UserSession>> GetUserItems()
         {
-          
-          var users = _context.UserItems
+
+      var users = _context.UserItems
                        .Select(x => new UserSession(x.userName, x.userRole, "1"));
-            return users.ToArray();
+            return Ok(users.ToArray());
         }
 
-        // GET: api/UserItems/5
-        [HttpGet("{id}")]
+    // GET: api/UserItems/5
+    [Authorize]
+    [HttpGet("{id}")]
         public async Task<ActionResult<UserItem>> GetUserItem(string id)
         {
-            var userItem = await _context.UserItems.FindAsync(id);
+      // var userItem = await _context.UserItems.FindAsync(id);
+      var userItem = await userService.getUserById(_context, id);
 
-            if (userItem == null)
+      if (userItem == null)
             {
                 return NotFound();
             }
@@ -51,8 +58,9 @@ namespace UserManagementApi.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         //only update Role
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserItem(string id, UserItem userItem)
+    [HttpPut("{id}")]
+    [Authorize]
+    public async Task<IActionResult> PutUserItem(string id, UserItem userItem)
         {
            
             if (id != userItem.userName)
@@ -89,10 +97,11 @@ namespace UserManagementApi.Controllers
             return Ok(true);
         }
 
-        // POST: api/UserItems
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPost]
+    // POST: api/UserItems
+    // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+    // more details see https://aka.ms/RazorPagesCRUD.
+    [Authorize]
+    [HttpPost]
         public async Task<ActionResult<UserItem>> PostUserItem(UserItem userItem)
         {
             var message = userItem.userPassword;
@@ -143,17 +152,20 @@ namespace UserManagementApi.Controllers
                 throw;
             }
 
+            var secretKey = _config.GetValue<String>(
+                "AppSettings:Secret");
+
             if (match)
             {
                 this.logAction("Log In", userdata.UserName, "Logged in succesfully");
-                var session = new UserSession(user.userName, user.userRole, "JWT_user");
-                // session.UserToken = "JWT_user"; // generateTokenUser();
+                var token = Security.generateJwtToken(user, secretKey);
+                var session = new UserSession(user.userName, user.userRole, token);
                 return Ok(session);
-            }
+              }
             else {
         if (userdata.UserName == "tempadmUser") {
-          var session = new UserSession(user.userName, user.userRole, "JWT_user");
-          // session.UserToken = "JWT_user"; // generateTokenUser();
+          var token = Security.generateJwtToken(user, secretKey);
+          var session = new UserSession(user.userName, user.userRole, token);
           return Ok(session);
         }
                 this.logAction("Log In", userdata.UserName, "Logged in failed due invalid credentials");
