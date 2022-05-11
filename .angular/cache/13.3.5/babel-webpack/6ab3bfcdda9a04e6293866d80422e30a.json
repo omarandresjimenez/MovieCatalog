@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class EnsureModuleLoadedOnceGuard {\n  constructor(targetModule) {\n    if (targetModule) {\n      throw new Error(`${targetModule.constructor.name} has already been loaded. Import this module in the AppModule only.`);\n    }\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
