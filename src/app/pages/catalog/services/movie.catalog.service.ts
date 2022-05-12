@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, pipe } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { MovieApiService } from '../api/movie.api';
 import { CardMovie, CardMovieCast } from '../../../models/cardMovie';
