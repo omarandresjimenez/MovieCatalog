@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{CA538C4F-1FC5-41FE-9565-D6952E69C604}|UserManagementApi">
+﻿<Properties StartupConfiguration="{CA538C4F-1FC5-41FE-9565-D6952E69C604}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="utils/general.cs">
     <Files>
       <File FileName="appsettings.Development.json" Line="9" Column="15" />
@@ -8,7 +8,7 @@
       <File FileName="utils/Hash.cs" />
       <File FileName="utils/Security.cs" />
       <File FileName="Helpers/AppSettings.cs" />
-      <File FileName="Helpers/AuthorizeAttribute.cs" Line="14" Column="10" />
+      <File FileName="Helpers/AuthorizeAttribute.cs" />
       <File FileName="Helpers/JwtMiddleware.cs" />
       <File FileName="services/userService.cs" />
       <File FileName="Program.cs" />
