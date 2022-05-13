@@ -46,7 +46,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
       - name: Remove files  
-        run: rm -R *.*
+        run: rm -r *
       - name: unZip  
         run: unzip release.zip
 
