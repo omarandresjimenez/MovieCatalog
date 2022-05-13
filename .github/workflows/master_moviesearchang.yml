@@ -28,9 +28,12 @@ jobs:
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
-        with:
-          name: node-app
-          path: .
+      
+      - name: move to web files
+        run: cd dist/personal-site
+        
+      - name: Zip Folder
+        run: zip -r release.zip . -x ".git/*" ".github/*"
 
   deploy:
     runs-on: ubuntu-latest
@@ -42,8 +45,10 @@ jobs:
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
-        with:
-          name: node-app
+      - name: Remove files  
+        run: rm -R *.*
+      - name: unZip  
+        run: unzip release.zip
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
