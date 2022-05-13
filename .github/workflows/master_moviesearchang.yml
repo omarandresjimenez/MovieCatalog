@@ -26,17 +26,14 @@ jobs:
           npm install
           npm run build --if-present
       
-      - name: move to web files
-        run: cd dist/personal-site
-        
       - name: Zip Folder
-        run: zip -r release.zip . -x ".git/*" ".github/*"
+        run: zip -r release.zip ./dist/personal-site
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./dist/personal-site/release.zip
 
   deploy:
     runs-on: ubuntu-latest
