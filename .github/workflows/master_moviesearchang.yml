@@ -27,7 +27,7 @@ jobs:
           npm run build --if-present
       
       - name: Zip Folder
-        run:  cd dist/personal-site && zip release.zip .
+        run:  cd dist/personal-site && zip -r .
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
