@@ -42,10 +42,10 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
       - name: Remove files  
         run: rm -r *
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
       - name: unZip  
         run: unzip release.zip
 
